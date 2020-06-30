@@ -25,3 +25,20 @@ their choice.
 
 ### Consumers
 Consumers read data from brokers. Consumers subscribes to one or more topics and consume published messages by pulling data from the brokers.
+
+
+# simple-app-demo
+
+To get in touch with the implementation, lets create a very simple app that store reviews for a specific vendor using nodejs. 
+Here we use kafka to get data from server and write it into the database
+
+Note: Before heading on create a project on google cloud and have cloud sdk setup for that project. ALso make sure you have docker and kubectl.
+
+Follow the steps sequentially:
+- [kafka-database-setup](./kafka-postgres-setup)
+- [producer-setup](./producer)
+- [consumer-setup](./consumer)
+
+### Test
+- After done, head to the loadbalancer ip of producer-service to demo the app! 
+
