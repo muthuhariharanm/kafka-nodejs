@@ -36,7 +36,7 @@ app.listen(8000,()=>{
 })
 
 app.get('/',(req,res)=>{
-  res.sendFile(__dirname+'/pages/producer.html')
+  res.send('HOME')
 })
 
 app.get('/mail/:mail',async (req,res)=>{
@@ -44,11 +44,6 @@ app.get('/mail/:mail',async (req,res)=>{
   res.render('review-page.hbs',{reviewee_email: req.params.mail , data: data })
 })
 
-app.post('/send',(req,res)=>{
-  let data = req.body
-  sendMessage(producer, topic, data)
-  res.redirect('/')
-})
 
 app.post('/review/:email',(req,res)=>{
   let data = req.body
